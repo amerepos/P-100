@@ -33,7 +33,7 @@ Developed for Python 3.8+
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Run Main and enter args passing args <br/>
+Run Main and enter args <br/>
 _Leave empty for default_
 
 **Example** <br/>
