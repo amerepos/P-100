@@ -13,6 +13,12 @@ but the source did not manage data structure well and take into account usabilit
 This project was meant to parse generated data and restructure it into a more readable structure 
 as needed by the data science team for ML model generation.
 
+#### Data format
+Data has start date and end date in first 2 cells.
+Then 3 rows for each site with and entry for each attribute for each date.
+Code handles unlimited attributes!
+Code handles unlimited sites!
+
 
 ### Built With
 
