@@ -16,5 +16,6 @@ if __name__ == '__main__':
     print('-----------------------------------------')
 
     print('Starting....')
-    restructure_analytics_data(file_path=file_path, sheet_name=sheet_name, out_path=out_path)
+    restructure = Restructure(file_path=file_path,sheet_name=sheet_name, out_path=out_path)
+    restructure.restructure_analytics_data()
     print('Done!')
