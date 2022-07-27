@@ -1,4 +1,4 @@
-from services import *
+from services import Restructure
 
 if __name__ == '__main__':
     file_path = input("Enter input file path: ")
