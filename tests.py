@@ -8,9 +8,9 @@ from os.path import exists
 
 @pytest.fixture
 def restructure28():
-    restructure = Restructure(file_path='data/28days.xlsx',
+    restructure = Restructure(file_path='data/test_files/28days.xlsx',
                               sheet_name='input_refresh_template',
-                              out_path='data/output.xlsx')
+                              out_path='data/test_files/output.xlsx')
     restructure.restructure_analytics_data()
     return restructure
 
@@ -29,9 +29,9 @@ def test_end_date28(restructure28):
 
 @pytest.fixture
 def restructure30():
-    restructure = Restructure(file_path='data/30days.xlsx',
+    restructure = Restructure(file_path='data/test_files/30days.xlsx',
                               sheet_name='input_refresh_template',
-                              out_path='data/output.xlsx')
+                              out_path='data/test_files/output.xlsx')
     restructure.restructure_analytics_data()
     return restructure
 
@@ -50,9 +50,9 @@ def test_end_date30(restructure30):
 
 @pytest.fixture
 def restructure31():
-    restructure = Restructure(file_path='data/31days.xlsx',
+    restructure = Restructure(file_path='data/test_files/31days.xlsx',
                               sheet_name='input_refresh_template',
-                              out_path='data/output.xlsx')
+                              out_path='data/test_files/output.xlsx')
     restructure.restructure_analytics_data()
     return restructure
 
@@ -70,34 +70,34 @@ def test_end_date31(restructure31):
 
 
 def test_1site():
-    restructure = Restructure(file_path='data/1site.xlsx',
+    restructure = Restructure(file_path='data/test_files/1site.xlsx',
                               sheet_name='input_refresh_template',
-                              out_path='data/output_1site.xlsx')
+                              out_path='data/test_files/output_1site.xlsx')
     restructure.restructure_analytics_data()
     assert len(restructure.result['Site ID'].unique()) == 1
 
 
 def test_5sites():
-    restructure = Restructure(file_path='data/5sites.xlsx',
+    restructure = Restructure(file_path='data/test_files/5sites.xlsx',
                               sheet_name='input_refresh_template',
-                              out_path='data/output_5sites.xlsx')
+                              out_path='data/test_files/output_5sites.xlsx')
     restructure.restructure_analytics_data()
     assert len(restructure.result['Site ID'].unique()) == 5
 
 
 def test_100sites():
-    restructure = Restructure(file_path='data/100sites.xlsx',
+    restructure = Restructure(file_path='data/test_files/100sites.xlsx',
                               sheet_name='input_refresh_template',
-                              out_path='data/output_100sites.xlsx')
+                              out_path='data/test_files/output_100sites.xlsx')
     restructure.restructure_analytics_data()
     assert len(restructure.result['Site ID'].unique()) == 100
 
 
 @pytest.fixture
 def restructure():
-    restructure = Restructure(file_path='data/Analytics Template for Exercise.xlsx',
+    restructure = Restructure(file_path='data/test_files/Analytics Template for Exercise.xlsx',
                               sheet_name='input_refresh_template',
-                              out_path='data/output.xlsx')
+                              out_path='data/test_files/output.xlsx')
     restructure.restructure_analytics_data()
     return restructure
 
